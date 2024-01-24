@@ -1,0 +1,9 @@
+<%= turbo_frame_tag "dog" do %>
+  <%if @dog.present?%>  
+    <%= image_tag(@dog) %>
+    <%= @breed %>
+  <%end%>
+  <%if @error.present?%>  
+    <%= @error %>
+  <%end%>
+<%end%>

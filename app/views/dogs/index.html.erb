@@ -1,0 +1,25 @@
+<div class="hero min-h-screen bg-base-200">
+  <div class="hero-content flex-col lg:flex-row-reverse">
+    <div class="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+      <%= form_with method: :put, url: dog_path, format: 'turbo_stream' do |f|%>
+        <div class="card bg-base-200 w-80">
+          <div class="card-body">
+            <%= f.text_field :breed, placeholder:"Breed", class:"input input-bordered", type:""%>
+            <%= f.submit 'Show', class:"btn btn-success btn-sm" %>
+          </div>
+        </div>      
+      <%end%>
+    </div>
+    <div class="text-center lg:text-right">
+      <div class="card bg-base-200 w-80">
+        <div class="card-body">
+          <div id="dogs">
+            <%= render partial: "dog" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
