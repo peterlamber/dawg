@@ -8,10 +8,12 @@ Switches input of main breed, meaning just typing "golden retriever" gives a res
 
 * Rails 7.0.1
 
-install/run
+install/run:
 
 bundle install
+
 rails s
 
 Tests:
+
 rails test
